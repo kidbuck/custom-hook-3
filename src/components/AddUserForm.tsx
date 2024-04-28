@@ -29,7 +29,7 @@ interface AddUserFormProps {
   onAddUser: (name: string) => void
 }
 
-const AddUserForm: React.FC<AddUserFormProps> = ({ onAddUser }) => {
+const AddUserForm: React.FC<AddUserFormProps> = () => {
   const [userName, setUserName] = useState('')
   const dispatch = useDispatch()
 

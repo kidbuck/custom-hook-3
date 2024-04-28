@@ -1,7 +1,7 @@
 // components/UserList.tsx
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { deleteUser, editUser } from '../store/userListSlice'
+import {  editUser } from '../store/userListSlice'
 import styled from 'styled-components'
 
 const StyledUserList = styled.ul`
@@ -41,7 +41,7 @@ interface UserListProps {
   onEditUser: (userId: number, newName: string) => void
 }
 
-const UserList: React.FC<UserListProps> = ({ users, onDeleteUser, onEditUser }) => {
+const UserList: React.FC<UserListProps> = ({ users, onDeleteUser }) => {
   const [editedNames, setEditedNames] = useState<Record<number, string>>({})
   const dispatch = useDispatch()
 
